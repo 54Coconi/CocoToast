@@ -139,7 +139,7 @@ class ToastWidget(QWidget):
         message_type = self.msg_type_config.get(self.message_type, {})
         msg_level_color = message_type.get("color", "#00efff")
         msg_level_icon = message_type.get("icon", ":icons/info")
-        print(f"(_apply_message_type) - 消息级别{self.message_type}|背景{msg_level_color}|图标{msg_level_icon}")
+        print(f"(_apply_message_type) - 消息类型{self.message_type}|背景{msg_level_color}|图标{msg_level_icon}")
 
         icon = f"<img src='{msg_level_icon}' width='30' height='30'>"
         bg = f"background-color: {msg_level_color};"

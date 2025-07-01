@@ -1,3 +1,9 @@
+<div align="center">
+  <strong>Languages: </strong>
+  <a href="README.md">中文</a> | 
+  <a href="README_EN.md">English</a>
+</div>
+
 # CocoToast - PyQt5 现代化通知组件
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -145,7 +151,7 @@ toast.show_error("错误", "保存失败，请重试")
 
 ### 自定义消息类型步骤
 
-1. 在 `config.json` 中添加新的消息类型配置：
+1. 在 `config.json` 中添加新的消息类型配置,可以使用资源文件引用(`:icons/xxx`)也可以直接指定图标路径(`icons/xxx.svg`)：
 
 ```json
 {
@@ -157,7 +163,7 @@ toast.show_error("错误", "保存失败，请重试")
 }
 ```
 
-2. 在 `icons` 目录中添加对应的图标文件（如 `custom.png`）
+2. 在 `icons` 目录中添加对应的图标文件（如 `custom.svg`），大小为 `30 x 30`
 
 3. 在 `toast.qrc` 中添加图标资源（如果使用自定义图标）：
 
