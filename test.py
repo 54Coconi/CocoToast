@@ -6,6 +6,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton
 from toast import ToastService
 
+
 class MainWindow(QWidget):
     """
     示例主窗口，展示 ToastManager 的使用方式。
@@ -33,8 +34,8 @@ class MainWindow(QWidget):
         for level in ["info", "success", "warning", "error"]:
             btn = QPushButton(f"显示 {level} 通知")
             btn.clicked.connect(lambda _, l=level: self.toast_manager.show(l,
-                f"<b>{l.upper()} 通知</b>",
-                f"这是 <i>{l}</i> 类型的消息内容。", 4000))
+                                                                           f"<b>{l.upper()} 通知</b>",
+                                                                           f"这是 <i>{l}</i> 类型的消息内容。", 4000))
             layout.addWidget(btn)
 
         # 异步触发（模拟后台线程中调用 UI 提示）
